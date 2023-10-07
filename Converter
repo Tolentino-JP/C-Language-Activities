@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main() {
+    
+    int n;
+    
+    char a[][20]={"","one","two","three","four","five","six","seven","eight","nine","ten"};
+    char b[][20]={"","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"};
+    char c[][20]={"","","Twenty","Thirty","Fourty","Fifty","Sixty","Seventy","Eighty","Ninety"};
+    char d[][20]={"","One Hundred","Two Hundred","Three Hundred","Four Hundred","Five Hundred","Six Hundred","Seven Hundred","Eight Hundred","Nine Hundred"};
+    char e[][20]={"","One Thousand","Two Thousand","Three Thousand","Four Thousand","Five Thousand","Six Thousand","Seven THousand","Eight Thousand","Nine Thousand","Ten Thousand"};
+   /* char f[][20]={"","One Million","Two Million","Three Million","Four Million","Five Million","Six Million","Seven Million","Eight Million","Nine Million","Ten Million"};*/
+    
+    printf("Enter the required 2 digit numner: ");
+    scanf("%d", &n);
+    
+    if(n>=1000 && n<=999999){
+        printf("%s ", e[n/1000]);
+        n = n%1000;
+    }
+    
+    if(n>=100 && n<=999){
+        printf("%s ", d[n/100]);
+        n = n%100;
+    }
+    if(n>0 && n<=10){
+        printf("%s",a[n]);
+    }else if(n>=11 && n<=19){
+        printf("%s", b[n%10]);
+    }else if(n>=20 && n<=99){
+        printf("%s %s", c[n/10],a[n%10]);
+    }else if(n==0){
+        printf("Zero");
+    }
+    
+
+    return 0;
+}
