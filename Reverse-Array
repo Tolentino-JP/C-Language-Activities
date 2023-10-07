@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+
+int main() {
+    int i, j;
+    int num[40], num1[40];
+    int a, b;
+    
+    printf("Input 3 number of elements in the array : \n\n");
+    
+    for(i=0;i<3;i++){
+        printf("element - %d : ", i);
+        scanf("%d", &num[i]);
+    }
+    
+    printf("\n\nThe values store into the array are : ");
+    
+    for(i=0;i<3;i++){
+        printf("%d ", num[i]);
+    }
+    printf("\n\n");
+    
+    for(i=0;i<3;i++){
+        a = num[i] ;
+        b = (b*10) + a;
+    }
+    while(b!=0){
+        
+        a = b % 10;
+        //b = b / 10;
+        num1[j] = a;
+        j++;
+        b = b / 10;
+        
+    }
+    
+    printf("The values store into the array in reverse are : ");
+    
+    for(i=0;i<3;i++){
+        printf("%d ", num1[i]);
+      return 0;
+}
