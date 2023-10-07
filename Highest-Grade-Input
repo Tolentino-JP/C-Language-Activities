@@ -1,0 +1,35 @@
+// “Name” got the highest point of “Grade”
+#include <stdio.h>
+//#include <string.h>
+
+
+int main() {
+    
+    char name[5][50];
+    int i, grade[50], high = 0, j ;
+    
+    for(i=0;i<5;i++){
+        printf("Enter name: ");
+        scanf("%s", name[i]);
+        printf("Enter grade: ");
+        scanf("%d", &grade[i]);
+    }
+    
+    for(i=0;i<5;i++){
+        if(grade[i] > high){
+            high = grade[i];
+            //name1[1] = name[i];
+            j = i;
+        }
+        
+    }
+    
+    printf("%s got the highest point of %d", name[j], high);
+    
+    
+    
+    
+
+
+    return 0;
+}
